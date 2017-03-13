@@ -3,25 +3,14 @@ require 'rspec-puppet'
 require 'rspec-puppet/spec_helper'
 
 
-RSpec.configure do |c|
-  c.module_path = '/buddy/Cowsay-test/manifests'
-  c.manifest_dir = '/buddy/Cowsay-test/manifests'
-
-end
-
 require 'puppetlabs_spec_helper/rake_tasks'
 require 'puppet-lint/tasks/puppet-lint'
 require 'metadata-json-lint/rake_task'
 require 'puppet_blacksmith/rake_tasks'
 
-if RUBY_VERSION >= '1.9'
-  require 'rubocop/rake_task'
-  RuboCop::RakeTask.new
-end
 
 PuppetLint.configuration.send('disable_80chars')
 PuppetLint.configuration.relative = true
-PuppetLint.configuration.ignore_paths = ['spec/**/*.pp', 'pkg/**/*.pp']
 
 desc 'Validate manifests, templates, and ruby files'
 task :validate do
