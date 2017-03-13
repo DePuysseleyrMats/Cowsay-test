@@ -1,8 +1,4 @@
-## class cowsayings {
-##	include cowsay
-##	include fortune
-##}
-
-node default {
-	include init.pp
+ class init {
+	include cowsay
+	include fortune
 }
