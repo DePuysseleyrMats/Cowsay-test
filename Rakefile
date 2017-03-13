@@ -2,6 +2,7 @@ require 'puppetlabs_spec_helper/rake_tasks'
 require 'puppet-lint/tasks/puppet-lint'
 require 'metadata-json-lint/rake_task'
 require 'puppet_blacksmith/rake_tasks'
+require 'modules/cowsayings'
 
 if RUBY_VERSION >= '1.9'
   require 'rubocop/rake_task'
@@ -29,5 +30,8 @@ desc 'Run metadata_lint, lint, validate, and spec tests.'
 task :test do
   [:metadata_lint, :lint, :validate, :spec].each do |test|
     Rake::Task[test].invoke
+  end
+  Dir['modules/cowsayings/spec/**/*.rb', 'lib/**/*.rb'].each do |ruby_file|
+    sh "ruby -c #{ruby_file}" unless ruby_file =~ %r{spec/fixtures}
   end
 end
