@@ -1,4 +1,4 @@
- class init {
+ class ::init {
 	package {'ntp':
 		ensure => present,
 		provider => 'gem',
