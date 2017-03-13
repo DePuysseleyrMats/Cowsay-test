@@ -14,23 +14,20 @@ PuppetLint.configuration.ignore_paths = ['spec/**/*.pp', 'pkg/**/*.pp']
 
 desc 'Validate manifests, templates, and ruby files'
 task :validate do
-  Dir['modules/cowsayings/manifests/**/*.pp'].each do |manifest|
+  Dir['manifests/**/*.pp'].each do |manifest|
     sh "puppet parser validate --noop #{manifest}"
   end
-  Dir['modules/cowsayings/spec/**/*.rb', 'lib/**/*.rb'].each do |ruby_file|
+  Dir['spec/**/*.rb', 'lib/**/*.rb'].each do |ruby_file|
     sh "ruby -c #{ruby_file}" unless ruby_file =~ %r{spec/fixtures}
   end
-  Dir['modules/cowsayings/templates/**/*.erb'].each do |template|
+  Dir['templates/**/*.erb'].each do |template|
     sh "erb -P -x -T '-' #{template} | ruby -c"
   end
 end
 
 desc 'Run metadata_lint, lint, validate, and spec tests.'
 task :test do
-  [:spec].each do |test|
+  [:metadata_lint, :lint, :validate, :spec].each do |test|
     Rake::Task[test].invoke
-  end
-  Dir['modules/cowsayings/spec/**/*.rb', 'lib/**/*.rb'].each do |ruby_file|
-    sh "ruby -c #{ruby_file}" unless ruby_file =~ %r{spec/fixtures}
   end
 end
