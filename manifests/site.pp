@@ -1,4 +1,6 @@
  class init {
-	include ::cowsay
-	include ::fortune
+	package {'cowsay':
+		ensure => present,
+		provider => 'gem',
+	}
 }
