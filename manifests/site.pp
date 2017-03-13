@@ -1,4 +1,4 @@
  class init {
-	include cowsay
-	include fortune
+	include ::cowsay
+	include ::fortune
 }
