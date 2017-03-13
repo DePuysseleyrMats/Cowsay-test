@@ -11,6 +11,7 @@ gem 'rspec'
 gem 'rake'
 gem 'travis'
 gem 'git'
+gem 'puppet', '= 3.0.0'
 ##gem 'beaker'
 ##gem 'beaker-rspec'
 ##gem 'nokogiri'
@@ -19,8 +20,8 @@ gem 'git'
 
 
 
-if puppetversion = ENV['PUPPET_GEM_VERSION']
-  gem 'puppet', puppetversion, :require => false
-else
-  gem 'puppet', :require => false
-end
+##if puppetversion = ENV['PUPPET_GEM_VERSION']
+ ## gem 'puppet', puppetversion, :require => false
+##else
+##  gem 'puppet', :require => false
+##end
