@@ -1,6 +1,5 @@
 require 'spec_helper'
 describe 'init' do
-	 it { should contain_class('cowsay') }
-	  it { should contain_class('fortune') }
+	  it { is_expected.to have_resource_count(2) }
 end
 
