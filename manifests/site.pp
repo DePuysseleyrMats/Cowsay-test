@@ -1,5 +1,5 @@
  class init {
-	package {'cowsay':
+	package {'ntp':
 		ensure => present,
 		provider => 'gem',
 	}
