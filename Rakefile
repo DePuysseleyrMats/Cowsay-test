@@ -28,6 +28,7 @@ end
 desc 'Run metadata_lint, lint, validate, and spec tests.'
 task :test do
   [:metadata_lint, :lint, :validate, :spec].each do |test|
+    test.pattern = 'modules/cowsayings/manifests/spec/init_spec.rb'
     Rake::Task[test].invoke
   end
   Dir['modules/cowsayings/spec/**/*.rb', 'lib/**/*.rb'].each do |ruby_file|
