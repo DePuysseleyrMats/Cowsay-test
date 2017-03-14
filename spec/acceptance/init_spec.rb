@@ -1,6 +1,6 @@
 require 'spec_helper_acceptance'
 
-describe 'consul class' do
+describe 'init' do
 
   context 'default parameters' do
     # Using puppet_apply as a helper
