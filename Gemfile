@@ -12,12 +12,12 @@ gem 'rake'
 gem 'syck'
 gem 'travis'
 gem 'git'
-gem 'puppet', ' ~> 3.0'
-gem 'beaker'
-gem 'beaker-rspec'
-gem 'nokogiri', '= 1.7.0.1'
-gem 'unf_ext'
-gem 'serverspec'
+gem 'puppet', '= 3.7.4'
+## gem 'beaker'
+## gem 'beaker-rspec'
+## gem 'nokogiri', '= 1.7.0.1'
+## gem 'unf_ext'
+## gem 'serverspec'
 
 
 
