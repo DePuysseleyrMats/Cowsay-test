@@ -1,5 +1,9 @@
 # consul/spec/spec_helper_acceptance.rb
-require 'beaker-rspec'
+require 'beaker-rspec/spec_helper'
+require 'beaker-rspec/helpers/serverspec'
+require 'beaker/puppet_install_helper'
+require 'beaker/module_install_helper'
+
 
 # Not needed for this example as our docker files have puppet installed already
 #hosts.each do |host|
