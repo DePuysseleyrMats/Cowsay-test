@@ -1,0 +1,6 @@
+machine:
+  ruby:
+    version: 2.1.5
+test:
+  post:
+    - bundle exec rake test SPEC_OPTS="--format documentation" 
