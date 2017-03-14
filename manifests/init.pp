@@ -1,6 +1,6 @@
 class init {
 package {'ntp':
-	ensure => present,
+	ensure   => present,
 	provider => 'gem',
 }
 }
