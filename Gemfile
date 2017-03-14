@@ -17,8 +17,6 @@ gem 'beaker-rspec'
 gem 'nokogiri', '= 1.7.0.1'
 gem 'unf_ext'
 gem 'serverspec'
-gem 'syck'
-
 
 
 if puppetversion = '~> 3.0'
