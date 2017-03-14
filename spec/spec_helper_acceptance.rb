@@ -1,24 +1,26 @@
+# consul/spec/spec_helper_acceptance.rb
 require 'beaker-rspec'
 
-logger.error("LOADED MYYYYYYYYYY Spec Acceptance Helper")
-
-# Install Puppet on all hosts
-install_puppet_on(hosts, options)
+# Not needed for this example as our docker files have puppet installed already
+#hosts.each do |host|
+#  # Install Puppet #  install_puppet
+#end
 
 RSpec.configure do |c|
-  module_root = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+  # Project root
+  proj_root = File.expand_path(File.join(File.dirname(__FILE__), '..'))
 
+  # Readable test descriptions
   c.formatter = :documentation
 
+  # Configure all nodes in nodeset
   c.before :suite do
-    # Install module to all hosts
+    # Install module and dependencies
+    puppet_module_install(:source => proj_root, :module_name => 'consul')
     hosts.each do |host|
-      install_dev_puppet_module_on(host, :source => module_root, :module_name => 'mysql',
-          :target_module_path => '/etc/puppet/modules')
-      # Install dependencies
-      on(host, puppet('module', 'install', 'puppetlabs-stdlib'))
-
-      # Add more setup code as needed
+      # Needed for the consul module to download the binary per the modulefile
+      on host, puppet('module', 'install', 'puppetlabs-stdlib'), { :acceptable_exit_codes => [0,1] }
+      on host, puppet('module', 'install', 'nanliu/staging'), { :acceptable_exit_codes => [0,1] }
     end
   end
 end
