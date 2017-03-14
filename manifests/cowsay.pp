@@ -1,5 +1,5 @@
 class Cowsay-test::cowsay {
-	package {'cowsay':
-		ensure => present,
-	}
+package {'cowsay':
+	ensure => present,
+}
 }
