@@ -1,6 +1,7 @@
 require 'puppetlabs_spec_helper/module_spec_helper'
 require 'rspec-puppet'
 require 'rspec-puppet/spec_helper'
+require 'beaker/tasks/test'
 
 
 require 'puppetlabs_spec_helper/rake_tasks'
@@ -27,7 +28,8 @@ end
 
 desc 'Run metadata_lint, lint, validate, and spec tests.'
 task :test do
-  [:validate, :spec, :acceptance].each do |test|
+  [:validate, :spec].each do |test|
     Rake::Task[test].invoke
   end
+
 end
