@@ -14,7 +14,7 @@ gem 'git'
 gem 'puppet', ' = 3.7.4'
 gem 'beaker'
 gem 'beaker-rspec'
-##gem 'nokogiri'
+gem 'nokogiri'
 ##gem 'unf_ext'
 ##gem 'serverspec'
 
