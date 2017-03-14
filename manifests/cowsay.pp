@@ -1,5 +1,5 @@
 class cowsay {
 package {'cowsay':
-	ensure => present,
+ensure => present,
 }
 }
