@@ -1,4 +1,4 @@
-class Cowsay-test::cowsay {
+class cowsay {
 package {'cowsay':
 	ensure => present,
 }
