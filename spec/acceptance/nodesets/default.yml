@@ -1,7 +1,9 @@
 HOSTS:
-  ubuntu-12-10:
-    platform: ubuntu-12.10-x64
-    image: ubuntu:12.10
-    hypervisor: docker
+  debian-8-x64:
+    platform: debian-8-amd64
+    hypervisor : docker
+    image: debian:8
+    docker_preserve_image: true
 CONFIG:
   type: foss
+  log_level: debug
