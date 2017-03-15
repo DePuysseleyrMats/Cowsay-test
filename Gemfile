@@ -21,7 +21,7 @@ gem 'unf_ext'
 gem 'serverspec'
 
 
-if puppetversion = '~> 3.0'
+if puppetversion == '~> 3.0'
   gem 'puppet', puppetversion, :require => false
 else
   gem 'puppet', :require => false
