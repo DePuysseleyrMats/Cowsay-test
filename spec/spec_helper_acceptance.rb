@@ -1,6 +1,6 @@
 # consul/spec/spec_helper_acceptance.rb
-require 'beaker-rspec/spec_helper'
-require 'beaker-rspec/helpers/serverspec'
+#require 'beaker-rspec/spec_helper'
+#require 'beaker-rspec/helpers/serverspec'
 require 'beaker/puppet_install_helper'
 require 'beaker/module_install_helper'
 
