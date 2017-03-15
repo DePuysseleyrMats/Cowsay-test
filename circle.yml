@@ -2,5 +2,12 @@ machine:
   ruby:
     version: 2.2.5
 test:
+  pre:
+    - bundle -v
+    - rm Gemfile.lock || true
+    - gem update --system
+    - gem update bundler
+    - gem --version
+    - bundle -v
   post:
     - bundle exec rake test SPEC_OPTS="--format documentation" 
