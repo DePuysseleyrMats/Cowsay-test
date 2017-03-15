@@ -13,7 +13,7 @@ gem 'travis'
 gem 'git'
 gem 'docker'
 gem 'docker-api'
-## gem 'puppet', '= 3.7.4'
+gem 'puppet', '= 3.7.4'
 gem 'beaker', ' = 2.52.0'
 gem 'beaker-rspec', ' = 5.6.0'
 gem 'nokogiri', '= 1.7.0.1'
@@ -21,8 +21,8 @@ gem 'unf_ext'
 gem 'serverspec'
 
 
-if puppetversion '~> 3.0'
-  gem 'puppet', puppetversion, :require => false
-else
-  gem 'puppet', :require => false
-end
+##if puppetversion '~> 3.0'
+##  gem 'puppet', puppetversion, :require => false
+##else
+##  gem 'puppet', :require => false
+##end
