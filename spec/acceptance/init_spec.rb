@@ -9,7 +9,8 @@ describe 'init' do
   }
   it 'should apply without errors' do
     apply_manifest(manifest, :catch_failures => true)
-  end
+end
+end
 
   describe package('ntp') do
     it { is_expected.to be_installed }
