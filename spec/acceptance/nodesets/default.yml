@@ -1,9 +1,14 @@
 HOSTS:
-  debian-8-x64:
-    platform: debian-8-amd64
-    hypervisor : docker
-    image: debian:8
-    docker_preserve_image: true
+  ubuntu-1404-x64:
+    roles:
+      - master
+      - agent
+      - dashboard
+      - cloudpro
+    platform: ubuntu-1404-x86_64
+    hypervisor: vagrant
+    box: puppetlabs/ubuntu-14.04-64-nocm
+    box_url: https://vagrantcloud.com/puppetlabs/boxes/ubuntu-14.04-64-nocm
 CONFIG:
-  type: foss
-  log_level: debug
+  nfs_server: none
+  consoleport: 443
