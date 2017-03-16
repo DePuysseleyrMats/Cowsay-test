@@ -17,6 +17,13 @@ node {
   source ~/.rvm/scripts/rvm
   bundle exec rake test
   '''
+  
+  stage 'beaker testing'
+  sh '''#!/bin/bash
+  source ~/.rvm/scripts/rvm
+  bundle exec rake beaker
+  '''
+
 
 
 }
