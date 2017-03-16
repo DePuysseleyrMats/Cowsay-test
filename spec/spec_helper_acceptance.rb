@@ -4,9 +4,10 @@ require 'beaker-rspec/helpers/serverspec'
 
 
 # Not needed for this example as our docker files have puppet installed already
-#hosts.each do |host|
-#  # Install Puppet #  install_puppet
-#end
+hosts.each do |host|
+  # Install Puppet  
+  install_puppet
+end
 
 RSpec.configure do |c|
   # Project root
