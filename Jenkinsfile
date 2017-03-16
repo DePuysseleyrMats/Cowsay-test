@@ -9,7 +9,6 @@ node {
   gem update bundler
   gem --version
   gem update --system
-  gem 'rainbow', '>= 2.1.0', '< 2.2.0'
   bundle install --path=.bundle/gems/ --without system_tests
   '''
 
