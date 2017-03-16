@@ -14,4 +14,5 @@ describe 'apache class' do
   when 'Gentoo'
     package_name = 'ntp'
     service_name = 'ntp'
+  end
 end
