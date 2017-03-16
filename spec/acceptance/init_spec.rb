@@ -1,12 +1,15 @@
 require 'spec_helper_acceptance'
 
 describe 'init' do
-  pp = <<-EOS
-    class { 'init': }
-  EOS
-
-  apply_manifest(pp, :catch_failures => true)
-  expect(apply_manifest(pp, :catch_failures => true).exit_code).to be_zero
+  describe 'spacewalk::server' do
+  let(:manifest) {
+    <<-EOS
+      include init
+    EOS
+  }
+  it 'should apply without errors' do
+    apply_manifest(manifest, :catch_failures => true)
+  end
 
   describe package('ntp') do
     it { is_expected.to be_installed }
