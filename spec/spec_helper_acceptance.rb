@@ -4,13 +4,8 @@ require 'beaker-rspec/helpers/serverspec'
 
 
 # Not needed for this example as our docker files have puppet installed already
-hosts.each do |host|
-    if host.is_pe?
-      install_pe
-    else
+hosts.each do |host|   
       install_puppet
-      on host, "mkdir -p #{host['distmoduledir']}"
-    end
 end
 
 
