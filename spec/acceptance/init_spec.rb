@@ -1,7 +1,7 @@
 require 'spec_helper_acceptance'
 
 describe 'init' do
-  it 'should apply without errors' do
-    apply_manifest
+  describe package('ntp') do
+    it { is_expected.to be_installed }
   end
 end
