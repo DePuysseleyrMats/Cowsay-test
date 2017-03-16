@@ -6,9 +6,9 @@ node {
   stage 'prepare gems'
   sh '''#!/bin/bash
   source ~/.rvm/scripts/rvm
-  gem update --system
   gem update bundler
   gem --version
+  gem update --system
   bundle install --path=.bundle/gems/ --without system_tests
   '''
 
