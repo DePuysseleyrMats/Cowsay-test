@@ -1,6 +1,6 @@
 require 'spec_helper_acceptance'
 
-describe 'apache class' do
+describe 'init' do
   case fact('osfamily')
   when 'RedHat'
     package_name = 'ntp'
