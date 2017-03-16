@@ -11,8 +11,8 @@ hosts.each do |host|
       install_puppet
       on host, "mkdir -p #{host['distmoduledir']}"
     end
-  end
 end
+
 
 RSpec.configure do |c|
   # Project root
