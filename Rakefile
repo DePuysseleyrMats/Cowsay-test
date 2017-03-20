@@ -12,6 +12,7 @@ require 'puppet_blacksmith/rake_tasks'
 
 PuppetLint.configuration.send('disable_80chars')
 PuppetLint.configuration.relative = true
+PuppetLint.configuration.ignore_paths = ['spec/**/*.pp', 'pkg/**/*.pp']
 
 desc 'Validate manifests, templates, and ruby files'
 task :validate do
@@ -28,8 +29,7 @@ end
 
 desc 'Run metadata_lint, lint, validate, and spec tests.'
 task :test do
-  [:validate, :spec].each do |test|
+  [:metadata_lint, :lint, :validate, :spec].each do |test|
     Rake::Task[test].invoke
   end
-
 end
