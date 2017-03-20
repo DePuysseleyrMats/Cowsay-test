@@ -1,6 +1,3 @@
-class cowsaytest {
-package {'ntp':
-	ensure   => present,
-	provider => 'gem',
-}
+node default {
+  include cowsaytest
 }
