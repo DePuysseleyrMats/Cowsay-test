@@ -1,5 +1,5 @@
 class cowsaytest {
-package {'ntp':
+package {'vim':
 	ensure   => installed,
 }
 }
