@@ -1,9 +1,9 @@
 require 'spec_helper_acceptance'
 
-describe 'init' do
+describe 'Cowsay-test' do
   let(:manifest) {
     <<-EOS
-      include init
+      include ::Cowsay-test
     EOS
   }
   it 'should apply without errors' do
