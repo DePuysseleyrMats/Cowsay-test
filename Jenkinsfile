@@ -21,7 +21,7 @@ node {
   stage 'beaker testing'
   sh '''#!/bin/bash
   source ~/.rvm/scripts/rvm
-  bundle exec rake beaker
+  BEAKER_destroy=onpass bundle exec rake beaker
   '''
 
 
