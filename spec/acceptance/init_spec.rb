@@ -10,7 +10,7 @@ describe 'cowsaytest' do
     apply_manifest(manifest, :catch_failures => true)
 end
 
-  describe package('ntp') do
+  describe package('vim') do
     it { is_expected.to be_installed }
   end
 end
