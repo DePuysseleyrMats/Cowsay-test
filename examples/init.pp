@@ -1,1 +1,1 @@
-include ::Cowsay-test
+include ::cowsaytest
