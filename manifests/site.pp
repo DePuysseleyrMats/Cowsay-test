@@ -1,6 +1,3 @@
-class init {
-package {'ntp':
-	ensure   => present,
-	provider => 'gem',
-}
+node default {
+	include init
 }
