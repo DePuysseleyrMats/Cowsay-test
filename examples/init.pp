@@ -1,1 +1,1 @@
-include ::cowsaytest
+include cowsaytest
