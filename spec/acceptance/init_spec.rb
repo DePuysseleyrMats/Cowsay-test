@@ -1,7 +1,7 @@
 require 'spec_helper_acceptance'
 
 describe 'init' do
-  describe 'spacewalk::server' do
+  describe 'init' do
   let(:manifest) {
     <<-EOS
       include init
