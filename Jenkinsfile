@@ -15,7 +15,7 @@ node {
   stage 'rspec testing'
   sh '''#!/bin/bash
   source ~/.rvm/scripts/rvm
-  bundle exec rake test
+  bundle exec rake spec
   '''
   
   stage 'beaker testing'
