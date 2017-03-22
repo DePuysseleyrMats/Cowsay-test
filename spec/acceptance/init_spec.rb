@@ -24,7 +24,7 @@ require 'spec_helper_acceptance'
   }
   EOS
 
-  describe 'cowsaytest::cowsaytest' do
+  describe 'cowsaytest' do
     it 'should apply without errors' do
       apply_manifest(default_pp, :catch_failures => true)
     end
