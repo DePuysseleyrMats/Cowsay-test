@@ -22,7 +22,7 @@ require 'spec_helper_acceptance'
 
 
   it 'should apply without errors' do
-    apply_manifest(manifest, :catch_failures => true)
+    apply_manifest(default_pp, :catch_failures => true)
   end
   
   describe package('vim') do
