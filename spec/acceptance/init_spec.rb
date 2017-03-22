@@ -15,17 +15,18 @@ require 'spec_helper_acceptance'
   :modulepath     => '/etc/puppetlabs/puppet/modules/',
   :debug          => true,
   }
+
   default_pp = <<-EOS
   include cowsaytest
   EOS
 
-  describe 'the mymodule class' do
-  describe 'given default params' do
-    it 'should return successfully' do
-      expect(apply_manifest(default_pp, apply_manifest_opts).exit_code).to be_zero
-    end
+
+  apply_manifest(default_pp, apply_manifest_opts)
+  
+  describe package('vim') do
+    it { is_expected.to be_installed }
   end
-  end
+
 
 
   describe package('wget') do
