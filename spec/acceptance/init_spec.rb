@@ -28,6 +28,10 @@ require 'spec_helper_acceptance'
     it 'should apply without errors' do
       apply_manifest(default_pp, :catch_failures => true)
     end
+
+    it 'is idempotent' do
+        apply_manifest (default_pp, :catch_changes => true)
+      end
   end
 
   describe package('vim') do
