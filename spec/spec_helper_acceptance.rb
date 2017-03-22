@@ -8,11 +8,15 @@ hosts.each do |host|
       install_puppet
 end
 
+fixture_path = File.expand_path(File.join(__FILE__, '..', 'fixtures'))
 
 RSpec.configure do |c|
   # Project root
-  proj_root = File.expand_path(File.join(File.dirname(__FILE__), '..'))
-
+  proj_root = File.expand_path(File.join(File.dirname(__FILE__), '..')) 
+  c.module_path = File.join(fixture_path, 'modules')
+  c.manifest_dir = File.join(fixture_path, 'manifests')
+      
+end
   # Readable test descriptions
   c.formatter = :documentation
 
