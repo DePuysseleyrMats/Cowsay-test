@@ -20,11 +20,12 @@ require 'spec_helper_acceptance'
   include cowsaytest
   EOS
 
-
-  it 'should apply without errors' do
-    apply_manifest(default_pp, :catch_failures => true)
+  describe 'cowsaytest' do
+    it 'should apply without errors' do
+      apply_manifest(default_pp, :catch_failures => true)
+    end
   end
-  
+
   describe package('vim') do
     it { is_expected.to be_installed }
   end
