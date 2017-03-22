@@ -13,4 +13,3 @@ require 'spec_helper_acceptance'
   describe package('wget') do
     it { is_expected.to be_installed }
   end
-end
