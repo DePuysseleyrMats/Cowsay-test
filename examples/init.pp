@@ -1,5 +1,1 @@
-class cowsaytest {
-package {'vim':
-	ensure   => installed,
-}
-}
+include cowsaytest::cowsaytest
