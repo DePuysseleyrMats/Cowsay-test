@@ -17,7 +17,7 @@ require 'spec_helper_acceptance'
   }
 
   default_pp = <<-EOS
-  include cowsaytest::cowsaytest
+  include cowsaytest
   EOS
 
   describe 'cowsaytest::cowsaytest' do
