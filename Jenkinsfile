@@ -10,7 +10,6 @@ node {
   gem --version
   gem update --system
   bundle install --path=.bundle/gems/ --without system_tests
-  rspec-puppet-init
   '''
 
   stage 'rspec testing'
