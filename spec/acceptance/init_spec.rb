@@ -17,7 +17,11 @@ require 'spec_helper_acceptance'
   }
 
   default_pp = <<-EOS
-  include cowsaytest
+  class cowsaytest {
+    package {'vim':
+	    ensure   => installed,
+    }
+  }
   EOS
 
   describe 'cowsaytest::cowsaytest' do
