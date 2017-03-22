@@ -17,10 +17,10 @@ require 'spec_helper_acceptance'
   }
 
   default_pp = <<-EOS
-  include cowsaytest
+  include cowsaytest::cowsaytest
   EOS
 
-  describe 'cowsaytest' do
+  describe 'cowsaytest::cowsaytest' do
     it 'should apply without errors' do
       apply_manifest(default_pp, :catch_failures => true)
     end
