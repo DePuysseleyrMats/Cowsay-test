@@ -15,7 +15,9 @@ require 'spec_helper_acceptance'
   :modulepath     => '/etc/puppetlabs/puppet/modules/',
   :debug          => true,
   }
-  default_pp = "etc/puppetlabs/puppet/modules/cowsaytest/manifests/init.pp"
+  default_pp = <<-EOS
+  include cowsaytest
+  EOS
 
   describe 'the mymodule class' do
   describe 'given default params' do
