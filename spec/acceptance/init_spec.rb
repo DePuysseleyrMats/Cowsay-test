@@ -10,7 +10,7 @@ require 'spec_helper_acceptance'
 #    apply_manifest(manifest, :catch_failures => true)
 #end
 
-  describe package('net-tools') do
+  describe package('wget') do
     it { is_expected.to be_installed }
   end
 end
