@@ -21,7 +21,9 @@ require 'spec_helper_acceptance'
   EOS
 
 
-  apply_manifest(default_pp, apply_manifest_opts)
+  it 'should apply without errors' do
+    apply_manifest(manifest, :catch_failures => true)
+  end
   
   describe package('vim') do
     it { is_expected.to be_installed }
