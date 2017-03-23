@@ -21,7 +21,7 @@ node {
   stage 'beaker testing'
   sh '''#!/bin/bash
   source ~/.rvm/scripts/rvm
-  BEAKER_destroy=onpass bundle exec rake beaker
+  BEAKER_set="centos-65-x64" BEAKER_set="default" bundle exec rake beaker
   '''
 
 
