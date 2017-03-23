@@ -22,6 +22,7 @@ require 'spec_helper_acceptance'
 	    ensure   => installed,
     }
   }
+  include cowsaytest
   EOS
 
   describe 'cowsaytest' do
