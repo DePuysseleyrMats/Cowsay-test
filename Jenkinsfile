@@ -1,3 +1,4 @@
 @Library('Jenkinsfile')
 import org.foo.Bar
-echo 'ble'
+def request = libraryResource 'Jenkinsfile'
+writeFile file: request
