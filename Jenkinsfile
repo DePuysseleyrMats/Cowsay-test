@@ -1,4 +1,4 @@
 @Library('Jenkinsfile')
-import org.foo.Bar
-def request = libraryResource 'Jenkinsfile'
-writeFile file: request
+import org.foo
+def pipe = new org.foo.TestApplication()
+pipe.execute()
