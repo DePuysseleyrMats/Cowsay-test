@@ -1,4 +1,4 @@
-@Library('GemLockApplication')
-import org.foo.TestApplication
-def pipe = new org.foo.TestApplication()
+@Library('Jenkinsfile')
+import org.foo.GemLockApplication
+def pipe = new org.foo.GemLockApplication()
 pipe.execute()
