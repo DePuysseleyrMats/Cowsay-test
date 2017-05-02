@@ -1,12 +1,12 @@
 HOSTS:
-  centos-5-64-1:
+  centos-7-64-1:
     roles:
       - master
       - dashboard
       - database
       - agent
-    vmname: centos-5-x86-64-west
-    platform: el-5-x86_64
+    vmname: centos-7-x86-64-west
+    platform: el-7-x86_64
     hypervisor: ec2
     amisize: t2.micro
     snapshot: foss
