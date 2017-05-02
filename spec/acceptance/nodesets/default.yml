@@ -8,5 +8,6 @@ HOSTS:
     vmname: centos-5-x86-64-west
     platform: el-5-x86_64
     hypervisor: ec2
+    amisize: t2.micro
     snapshot: foss
     user: ec2-user
