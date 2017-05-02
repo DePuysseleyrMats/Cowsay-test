@@ -1,1 +1,5 @@
-#test
+AMI:
+  centos-5-x86-64-west:
+    :image:
+      :pe: ami-ec0a80dc
+    :region: us-west-2
