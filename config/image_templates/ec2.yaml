@@ -1,5 +1,5 @@
 AMI:
   centos-7-x86-64-west:
     :image:
-      :foss: ami-19afd929
+      :foss: ami-d3da6bb3
     :region: us-west-2
