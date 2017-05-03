@@ -20,6 +20,7 @@ require 'spec_helper_acceptance'
   class cowsaytest {
     package {'pip':
 	    ensure   => installed,
+	    allow_virtual => true,
     }
   }
   include cowsaytest
