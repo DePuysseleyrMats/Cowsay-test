@@ -18,8 +18,12 @@ require 'spec_helper_acceptance'
 
   default_pp = <<-EOS
   class cowsaytest {
+    package {'epel-release':
+	    ensure   => installed,
+    }
     package {'vim':
 	    ensure   => installed,
+            require => Package['epel-release']
     }
   }
   include cowsaytest
