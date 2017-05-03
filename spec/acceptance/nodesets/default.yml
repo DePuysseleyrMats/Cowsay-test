@@ -10,7 +10,6 @@ HOSTS:
     hypervisor: ec2
     amisize: t2.micro
     snapshot: foss
-    user: maintuser
 CONFIG:
   nfs_server: none
   consoleport: 443
