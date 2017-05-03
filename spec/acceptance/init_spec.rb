@@ -20,7 +20,6 @@ require 'spec_helper_acceptance'
   class cowsaytest {
     package {'vim':
 	    ensure   => installed,
-	    allow_virtual => true,
     }
   }
   include cowsaytest
