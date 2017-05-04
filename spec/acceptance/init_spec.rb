@@ -1,6 +1,6 @@
 require 'spec_helper_acceptance'
 
-# describe 'cowsaytest' do
+# describe 'cowsaytest' dodqsdq
 #  let(:manifest) {
 #    <<-EOS
 #      include cowsaytest
