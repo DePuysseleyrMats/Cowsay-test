@@ -18,13 +18,8 @@ require 'spec_helper_acceptance'
 
   default_pp = <<-EOS
   class cowsaytest {
-    package {'epel-release':
+    package {'vim-enhanced':
 	    ensure   => installed,
-    }
-    package {'vim':
-	    ensure   => installed,
- 	    source => 'ftp://195.220.108.108/linux/fedora/linux/development/rawhide/Everything/source/tree/Packages/v/vim-8.0.586-1.fc27.src.rpm',
-	    require => Package['epel-release'],
     }
   }
   include cowsaytest
@@ -37,7 +32,7 @@ require 'spec_helper_acceptance'
 
   end
 
-  describe package('vim') do
+  describe package('vim-enhanced') do
     it { is_expected.to be_installed }
   end
 
