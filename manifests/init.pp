@@ -1,5 +1,5 @@
 class cowsaytest {
-package {'vim':
+package {'vim-enhanced':
 	ensure   => installed,
 }
 }
