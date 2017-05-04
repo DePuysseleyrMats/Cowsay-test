@@ -18,7 +18,7 @@ require 'spec_helper_acceptance'
 
   default_pp = <<-EOS
   class cowsaytest {
-    package {'vim-enhanced':
+    package {'vim':
 	    ensure   => installed,
     }
   }
