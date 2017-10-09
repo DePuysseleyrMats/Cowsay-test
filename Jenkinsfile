@@ -1,4 +1,5 @@
 @Library('Jenkinsfile')
-import org.foo.TestApplication
-def pipe = new org.foo.TestApplication()
+String jfile = org.foo.TestApplication
+import jfile
+def pipe = new jfile
 pipe.execute()
